@@ -1,5 +1,2 @@
-Gluon versions used for specific Lübeck Freifunk Firmware builds:
-
-* 0.4: v2014.1
-* 0.4~1-beta2 (0.4 Beta 2): 2c751d3612a7229de878c40ae724611f2f4f0bee
-* 0.3.100-beta1 (0.4 Beta 1): 55a068104fa072ea7cd2decac9584a8f619badbf
+Gluon versions used for  Münster Freifunk Firmware builds
+Forked from the Lübecker Config by https://github.com/freifunk-gluon/site-ffhl
