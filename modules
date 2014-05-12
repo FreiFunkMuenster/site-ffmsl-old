@@ -1,5 +1,5 @@
 
 GLUON_SITE_FEEDS='batwan'
 
-PACKAGES_BATWAN_REPO=git://github.com/freifunk-gluon/packages.git
+PACKAGES_BATWAN_REPO=-b batman-on-wan git://github.com/freifunk-gluon/packages.git
 PACKAGES_BATWAN_COMMIT=341bb49b201ee734dbf842713b45e1d56ffaf517
