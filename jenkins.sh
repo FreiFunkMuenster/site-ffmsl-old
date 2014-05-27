@@ -38,8 +38,6 @@ perl -pe 's/\$(\w+)/$ENV{$1}/g' $WORKSPACE/site.conf > $WORKSPACE/gluon/site/sit
 # Gluon Pakete aktualisieren und Build ausführen 
 
 cd $WORKSPACE/gluon
-make update
-make clean
 make 
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
