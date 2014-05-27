@@ -31,15 +31,13 @@ mkdir $WORKSPACE/gluon/site
 
 cp $WORKSPACE/modules $WORKSPACE/gluon/site 
 cp $WORKSPACE/site.mk $WORKSPACE/gluon/site 
-
-perl -pe 's/\$(\w+)/$ENV{$1}/g' $WORKSPACE/site.conf > $WORKSPACE/gluon/site/site.conf 
+cp $WORKSPACE/site.conf $WORKSPACE/gluon/site 
 
 
 # Gluon Pakete aktualisieren und Build ausführen 
-
 cd $WORKSPACE/gluon
-make update V=s
-make V=s
+make update 
+make GLUON_RELEASE = 0.3+$BUILD_NUMBER
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
