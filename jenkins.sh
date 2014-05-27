@@ -38,8 +38,8 @@ perl -pe 's/\$(\w+)/$ENV{$1}/g' $WORKSPACE/site.conf > $WORKSPACE/gluon/site/sit
 # Gluon Pakete aktualisieren und Build ausführen 
 
 cd $WORKSPACE/gluon
-make update
-make 
+make update V=s
+make V=s
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
