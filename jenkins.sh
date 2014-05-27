@@ -14,27 +14,24 @@
 ###############################################################################################
 
 
-# Verzeichnis für Gluon-Repo erstellen und initialisieren  
+# alte Build-Daten löschen 
 
-if [ ! -d "$WORKSPACE/gluon" ]; then
-  git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
+if [ -d "$WORKSPACE/gluon" ]; then
+  rm -r $WORKSPACE/gluon
 fi
 
-
-# Gluon-Repo aktualisieren 
-cd $WORKSPACE/gluon 
-git fetch
+# Verzeichnis für Gluon-Repo erstellen und initialisieren  
+git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
 
 
 # Dateien in das Gluon-Repo kopieren
 # In der site.conf werden hierbei Umgebungsvariablen durch die aktuellen Werte ersetzt
 
-if [ ! -d "$WORKSPACE/gluon/site" ]; then
-  mkdir $WORKSPACE/gluon/site 
-fi
+mkdir $WORKSPACE/gluon/site 
 
 cp $WORKSPACE/modules $WORKSPACE/gluon/site 
 cp $WORKSPACE/site.mk $WORKSPACE/gluon/site 
+
 perl -pe 's/\$(\w+)/$ENV{$1}/g' $WORKSPACE/site.conf > $WORKSPACE/gluon/site/site.conf 
 
 
