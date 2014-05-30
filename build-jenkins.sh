@@ -23,6 +23,8 @@ fi
 # Verzeichnis für Gluon-Repo erstellen und initialisieren  
 git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
 
+cd $WORKSPACE
+git checkout e7e8445df404c44add352524765fc4e6fd228cc4
 
 # Dateien in das Gluon-Repo kopieren
 # In der site.conf werden hierbei Umgebungsvariablen durch die aktuellen Werte ersetzt
@@ -37,7 +39,7 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE/gluon
 make update 
-make GLUON_RELEASE=0.3+$BUILD_NUMBER
+make GLUON_RELEASE=0.4.1+$BUILD_NUMBER
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
