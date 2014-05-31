@@ -13,6 +13,11 @@
 # 
 ###############################################################################################
 
+# Globale Einstellungen 
+export GLUON_URL=https://github.com/freifunk-gluon/gluon.git
+export GLUON_COMMIT=e7e8445df404c44add352524765fc4e6fd228cc4
+export GLUON_RELEASE=0.4.1+$BUILD_NUMBER
+export GLUON_BRANCH=experimental
 
 # alte Build-Daten löschen 
 
@@ -21,10 +26,10 @@ if [ -d "$WORKSPACE/gluon" ]; then
 fi
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren  
-git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
+git clone $GLUON_URL $WORKSPACE/gluon
 
 cd $WORKSPACE
-git checkout e7e8445df404c44add352524765fc4e6fd228cc4
+git checkout $GLUON_COMMIT
 
 # Dateien in das Gluon-Repo kopieren
 # In der site.conf werden hierbei Umgebungsvariablen durch die aktuellen Werte ersetzt
@@ -38,8 +43,8 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE/gluon
-make update 
-make GLUON_RELEASE=0.4.1+$BUILD_NUMBER
+make update GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
+make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
@@ -47,7 +52,7 @@ make GLUON_RELEASE=0.4.1+$BUILD_NUMBER
 # Repo: https://github.com/tcatm/ecdsautils
 
 cd $WORKSPACE/gluon
-make manifest GLUON_BRANCH=experimental
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
 mv images/sysupgrade/experimental.manifest images/sysupgrade/manifest
 sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/manifest
 
