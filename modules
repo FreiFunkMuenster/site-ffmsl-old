@@ -1,5 +1,5 @@
 
-GLUON_SITE_FEEDS='batwan'
+GLUON_SITE_FEEDS='ffms'
 
-PACKAGES_BATWAN_REPO='git://github.com/freifunk-gluon/packages.git batman-on-wan'
-PACKAGES_BATWAN_COMMIT='341bb49b201ee734dbf842713b45e1d56ffaf517'
+PACKAGES_FFMS_REPO='https://github.com/FreiFunkMuenster/packages-ffms.git'
+PACKAGES_FFMS_COMMIT='f8b7fa19f62e6791c972dbb3a794a687ee86467c'

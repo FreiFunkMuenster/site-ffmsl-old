@@ -43,8 +43,8 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE/gluon
-make update GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
-make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
+make update GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH V=s
+make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH V=s
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
@@ -52,7 +52,7 @@ make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
 # Repo: https://github.com/tcatm/ecdsautils
 
 cd $WORKSPACE/gluon
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH 
 mv images/sysupgrade/experimental.manifest images/sysupgrade/manifest
 sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/manifest
 
