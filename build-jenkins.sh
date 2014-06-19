@@ -19,20 +19,27 @@ export GLUON_COMMIT=e7e8445df404c44add352524765fc4e6fd228cc4
 export GLUON_RELEASE=0.4.1+$BUILD_NUMBER
 export GLUON_BRANCH=experimental
 
-# alte Build-Daten löschen 
-
-if [ -d "$WORKSPACE/gluon" ]; then
-  rm -r $WORKSPACE/gluon
-fi
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren  
-git clone $GLUON_URL $WORKSPACE/gluon
 
-cd $WORKSPACE
+if [ ! -d "$WORKSPACE/gluon" ]; then
+  mkdir -r $WORKSPACE/gluon
+  git clone $GLUON_URL $WORKSPACE/gluon
+fi
+
+
+# Gluon Repo aktualisieren 
+
+cd $WORKSPACE/gluon
+git pull 
 git checkout $GLUON_COMMIT
 
 # Dateien in das Gluon-Repo kopieren
 # In der site.conf werden hierbei Umgebungsvariablen durch die aktuellen Werte ersetzt
+
+if [ -d $WORKSPACE/gluon/site  ]; then
+  rm -r $WORKSPACE/gluon/site
+fi
 
 mkdir $WORKSPACE/gluon/site 
 
@@ -43,8 +50,10 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE/gluon
-make update GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH V=s
-make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH V=s
+make update GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH 
+make clean GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH
+make GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=$GLUON_BRANCH 
+
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
