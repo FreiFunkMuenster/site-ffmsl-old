@@ -20,7 +20,7 @@ export GLUON_RELEASE=0.4.1+$BUILD_NUMBER
 export GLUON_BRANCH=experimental
 
 
-# Verzeichnis für Gluon-Repo erstellen und initialisieren  
+# Verzeichnis für Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
   mkdir -r $WORKSPACE/gluon
