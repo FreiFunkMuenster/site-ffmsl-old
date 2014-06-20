@@ -8,7 +8,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-legacy \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
-	gluon-luci-portconfig \
 	gluon-next-node \
 	gluon-mesh-batman-adv \
 	gluon-mesh-vpn-fastd \
