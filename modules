@@ -2,4 +2,4 @@
 GLUON_SITE_FEEDS='ffms'
 
 PACKAGES_FFMS_REPO='https://github.com/FreiFunkMuenster/packages-ffms.git'
-PACKAGES_FFMS_COMMIT='2261aa90c2b3cc36567869446089ee336b1d3390'
+PACKAGES_FFMS_COMMIT='ee91f7ebd3347f5ecf4764ee2fbfd5af2d01696c'
