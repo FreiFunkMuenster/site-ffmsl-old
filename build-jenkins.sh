@@ -16,7 +16,7 @@
 # Globale Einstellungen 
 export GLUON_URL=https://github.com/freifunk-gluon/gluon.git
 export GLUON_COMMIT=9d1958b7742f363d657a2d65290a9ab7e0588053
-export GLUON_RELEASE=0.4.3+$BUILD_NUMBER
+export GLUON_RELEASE=2014.3+$BUILD_NUMBER
 
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren   
