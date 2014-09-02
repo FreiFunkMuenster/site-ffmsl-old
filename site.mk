@@ -8,7 +8,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
 	gluon-luci-portconfig \
-	gluon-luci-private-wifi \
 	gluon-mesh-batman-adv \
 	gluon-mesh-vpn-fastd \
 	gluon-next-node \
