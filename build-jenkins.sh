@@ -15,7 +15,7 @@
 
 # Globale Einstellungen 
 export GLUON_URL=https://github.com/freifunk-gluon/gluon.git
-export GLUON_COMMIT=v2014.3.1
+export GLUON_COMMIT=v2014.4
 export GLUON_RELEASE=$GLUON_COMMIT+$BUILD_NUMBER
 
 
