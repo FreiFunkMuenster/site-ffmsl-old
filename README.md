@@ -1,10 +1,11 @@
 Gluon versions used for  Münster Freifunk Firmware builds
 Forked from the Lübecker Config by https://github.com/freifunk-gluon/site-ffhl
 
-To trigger a build by our build service, merge this branch into the `experimental` branch:
+The version number is derived from the used gluon version and will be siffixed with an 
+increasing build number. 
 
-* Checkout the master branch: `git checkout master`
-* Commit your changes: `git commit -a`
-* Checkout the experimental branch: `git checkout experimental`
-* Merge master into experimental: `git merge master`
-* Push your changes to experimental: `git push origin experimental`
+Merges and commits to branch 'master' will trigger a build a our central buildserver which 
+results in a version which can be deployed by the autoupdater functionality. 
+
+For manual builds the script 'build-test.sh' can be used. 
+
