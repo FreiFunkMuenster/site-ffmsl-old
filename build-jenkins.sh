@@ -3,7 +3,7 @@
 ###############################################################################################
 # Jenkins-Buildscript zu erstellung der Images
 # 
-# Dieses Script wird nach jedem Push auf dem Freifunk Buildserver ausgführt 
+# Dieses Script wird nach jedem Push auf dem Freifunk Buildserver ausgfÃ¼hrt 
 # und erstelt die Images komplett neu.
 # 
 # Durch den Jenkins-Server werden folgende Systemvariablem gesetzt:
@@ -19,10 +19,9 @@ export GLUON_COMMIT=v2014.4
 export GLUON_RELEASE=$GLUON_COMMIT+$BUILD_NUMBER
 
 
-# Verzeichnis für Gluon-Repo erstellen und initialisieren   
+# Verzeichnis fÃ¼r Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
-  mkdir -r $WORKSPACE/gluon
   git clone $GLUON_URL $WORKSPACE/gluon
 fi
 
@@ -47,16 +46,16 @@ cp $WORKSPACE/site.mk $WORKSPACE/gluon/site
 cp $WORKSPACE/site.conf $WORKSPACE/gluon/site 
 
 
-# Gluon Pakete aktualisieren und Build ausführen 
+# Gluon Pakete aktualisieren und Build ausfÃ¼hren 
 cd $WORKSPACE/gluon
 make update GLUON_RELEASE=$GLUON_RELEASE  
 make clean GLUON_RELEASE=$GLUON_RELEASE 
 make V=s GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable
 
 
-# Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
-# Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
-# Tools 'ecdsasign' muss auf dem Server verfügbar sein.
+# Manifest fÃ¼r Autoupdater erstellen und mit den Key des Servers unterschreiben 
+# Der private SchlÃ¼ssel des Servers muss in $JENKINS_HOME/secret liegen und das 
+# Tools 'ecdsasign' muss auf dem Server verfÃ¼gbar sein.
 # Repo: https://github.com/tcatm/ecdsautils
 
 cd $WORKSPACE/gluon
