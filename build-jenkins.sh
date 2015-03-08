@@ -18,6 +18,13 @@ export GLUON_URL=https://github.com/freifunk-gluon/gluon.git
 export GLUON_COMMIT=v2014.4
 export GLUON_RELEASE=$GLUON_COMMIT+$BUILD_NUMBER
 
+if [ "$1" = '--disable-sign' ]; then
+	SIGN=0
+	shift
+else
+	SIGN=1
+fi
+
 
 # Verzeichnis für Gluon-Repo erstellen und initialisieren   
 
@@ -57,14 +64,14 @@ make V=s GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable
 # Der private Schlüssel des Servers muss in $JENKINS_HOME/secret liegen und das 
 # Tools 'ecdsasign' muss auf dem Server verfügbar sein.
 # Repo: https://github.com/tcatm/ecdsautils
+if [ $SIGN ]; then
+	cd $WORKSPACE/gluon
 
-cd $WORKSPACE/gluon
+	make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=experimental 
+	make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=beta 
+	make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable 
 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=experimental 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=beta 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable 
-
-sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/experimental.manifest
-sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/beta.manifest
-sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/stable.manifest
-
+	sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/experimental.manifest
+	sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/beta.manifest
+	sh contrib/sign.sh $JENKINS_HOME/secret images/sysupgrade/stable.manifest
+fi

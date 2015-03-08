@@ -17,5 +17,5 @@ export BUILD_NUMBER=000
 # Jenkins Build-Konfiguration 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 chmod +x $WORKSPACE/build-jenkins.sh
-sh $WORKSPACE/build-jenkins.sh
+sh $WORKSPACE/build-jenkins.sh --disable-sign
 
