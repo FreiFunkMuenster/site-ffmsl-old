@@ -48,6 +48,8 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 
 # Gluon Pakete aktualisieren und Build ausführen 
+# Optional kann hier mit GLUON_TARGET=x86-generic auch ein anderes Target erstellt werden 
+# Optional kann mit BROKEN=1 das Erstellen experimenteller Images ergänzt werden
 cd $WORKSPACE/gluon
 make update GLUON_RELEASE=$GLUON_RELEASE  
 make clean GLUON_RELEASE=$GLUON_RELEASE 
