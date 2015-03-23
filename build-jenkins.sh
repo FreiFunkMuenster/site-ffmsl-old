@@ -57,7 +57,8 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 cd $WORKSPACE/gluon
 make update GLUON_RELEASE=$GLUON_RELEASE  
 make clean GLUON_RELEASE=$GLUON_RELEASE 
-make V=s GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable
+make V=s GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable GLUON_TARGET=ar71xx-generic
+make V=s GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable GLUON_TARGET=mpc85xx-generic
 
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
