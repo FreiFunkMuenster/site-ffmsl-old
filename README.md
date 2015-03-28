@@ -1,11 +1,8 @@
-Gluon versions used for  Münster Freifunk Firmware builds
-Forked from the Lübecker Config by https://github.com/freifunk-gluon/site-ffhl
 
-The version number is derived from the used gluon version and will be siffixed with an 
-increasing build number. 
+Gluon Version des Freifunk Münster. 
 
-Merges and commits to branch 'master' will trigger a build a our central buildserver which 
-results in a version which can be deployed by the autoupdater functionality. 
+Der Vollständige Build wird duch das Script build.sh ausgeführt. 
+Eine Signierung der Images muss anschließend mit sign.sh erfolgen. 
 
-For manual builds the script 'build-test.sh' can be used. 
+Die Einstellungen für den Buildserver sind in dem Script Jenkins.sh hinterlegt.
 
