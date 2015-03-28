@@ -29,7 +29,7 @@ fi
 
 # Images Erstellen 
 cd $WORKSPACE
-sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL -j 4
+sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL -j 6 V=s
 
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
