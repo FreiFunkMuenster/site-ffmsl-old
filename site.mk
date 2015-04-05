@@ -21,6 +21,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-status-page \
 	iwinfo \
 	iptables \
-	haveged
+	haveged \
+	ffms-ebtables-net-rules 
 
 GLUON_PRIORITY := 3
