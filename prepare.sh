@@ -10,9 +10,9 @@
 # - Gluon-Commit (z.B. v2014.4)
 # - Build-Nummer (z.B. 114)
 # - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
+# - Optionale Parameter für make (z.B. V=s oder -j 4)
 #
 ###############################################################################################
-
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
@@ -51,7 +51,7 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 # Gluon Pakete aktualisieren  
 cd $WORKSPACE/gluon
-make update 
-make clean 
+make update $4 $5 $6 $7 $8 $9  
+make clean GLUON_RELEASE=$1+$2 $4 $5 $6 $7 $8 $9
 
 
