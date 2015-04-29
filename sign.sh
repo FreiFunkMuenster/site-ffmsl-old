@@ -30,9 +30,9 @@ fi
 cd $WORKSPACE/gluon
 
 # Manifeste erstellen 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=experimental 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=beta 
-make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable 
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=experimental GLUON_PRIORITY=0
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=beta GLUON_PRIORITY=1
+make manifest GLUON_RELEASE=$GLUON_RELEASE GLUON_BRANCH=stable GLUON_PRIORITY=3
 
 # Manifeste signieren 
 sh contrib/sign.sh $3 images/sysupgrade/experimental.manifest

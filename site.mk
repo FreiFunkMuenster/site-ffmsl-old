@@ -24,4 +24,4 @@ GLUON_SITE_PACKAGES := \
 	haveged 
 	 
 
-GLUON_PRIORITY := 3
+GLUON_PRIORITY ?= 3
