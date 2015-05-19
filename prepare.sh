@@ -45,12 +45,10 @@ fi
 
 mkdir $WORKSPACE/gluon/site 
 
-cp $WORKSPACE/modules $WORKSPACE/gluon/site 
-cp $WORKSPACE/site.mk $WORKSPACE/gluon/site 
-cp $WORKSPACE/site.conf $WORKSPACE/gluon/site 
+cp -r $WORKSPACE/modules $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $WORKSPACE/gluon/site
 
 
 # Gluon Pakete aktualisieren  
 cd $WORKSPACE/gluon
-make update GLUON_TARGET=$3
-make clean GLUON_TARGET=$3
+make update GLUON_RELEASE=$1 GLUON_TARGET=$3
+make clean GLUON_RELEASE=$1 GLUON_TARGET=$3
