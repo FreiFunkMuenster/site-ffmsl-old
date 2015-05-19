@@ -9,6 +9,7 @@
 # Das Script benötigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
 # - Build-Nummer (z.B. 114)
+# - Gluon-target (z.B. ar71xx-generic)
 # - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
 #
 ###############################################################################################
@@ -25,7 +26,7 @@ fi
 # Verzeichnis für Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
-  git clone $3 $WORKSPACE/gluon
+  git clone $4 $WORKSPACE/gluon
 fi
 
 
@@ -51,7 +52,5 @@ cp $WORKSPACE/site.conf $WORKSPACE/gluon/site
 
 # Gluon Pakete aktualisieren  
 cd $WORKSPACE/gluon
-make update 
-make clean 
-
-
+make update GLUON_TARGET=$3
+make clean GLUON_TARGET=$3

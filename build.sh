@@ -22,7 +22,8 @@ fi
 
 # Build Verzeichnis vorbereiten 
 cd $WORKSPACE
-sh ./prepare.sh $1 $2 $3 
+sh ./prepare.sh $1 $2 ar71xx-generic $3 
+sh ./prepare.sh $1 $2 mpc85xx-generic $3 
 
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE
