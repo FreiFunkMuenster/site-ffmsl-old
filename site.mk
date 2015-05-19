@@ -19,9 +19,12 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-vpn-fastd \
 	gluon-radvd \
 	gluon-status-page \
+	gluon-setup-mode \
+	gluon-wifi-config \
 	iwinfo \
 	iptables \
 	haveged 
 	 
 
 GLUON_PRIORITY := 3
+GLUON_LANGS ?= en de
