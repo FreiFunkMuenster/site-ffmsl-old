@@ -16,6 +16,15 @@
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
+letzterBefehlErfolgreich () {
+	if [ $? != 0 ]
+	then
+		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess."
+		exit 1;
+	fi
+}
+		
+
 if [ "x$WORKSPACE" = "x" ]; then
 	WORKSPACE=`pwd`
 fi
@@ -23,12 +32,16 @@ fi
 # Build Verzeichnis vorbereiten 
 cd $WORKSPACE
 sh ./prepare.sh $1 $2 ar71xx-generic $3 
+letzterBefehlErfolgreich;
 sh ./prepare.sh $1 $2 mpc85xx-generic $3 
+letzterBefehlErfolgreich;
 
 # Gluon Pakete aktualisieren und Build ausführen 
 cd $WORKSPACE
 sh ./compile.sh $1 $2 ar71xx-generic $4 $5 $6 $7 $8 $9
+letzterBefehlErfolgreich;
 sh ./compile.sh $1 $2 mpc85xx-generic $4 $5 $6 $7 $8 $9
+letzterBefehlErfolgreich;
 
 
 
