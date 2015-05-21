@@ -38,5 +38,11 @@ letzterBefehlErfolgreich;
 cd $WORKSPACE
 sh ./compile.sh $1 $2 ar71xx-generic $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
+sh ./compile.sh $1 $2 ar71xx-nand $4 $5 $6 $7 $8 $9
+letzterBefehlErfolgreich;
 sh ./compile.sh $1 $2 mpc85xx-generic $4 $5 $6 $7 $8 $9
+letzterBefehlErfolgreich;
+sh ./compile.sh $1 $2 x86-generic $4 $5 $6 $7 $8 $9
+letzterBefehlErfolgreich;
+sh ./compile.sh $1 $2 x86-kvm_guest $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
