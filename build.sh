@@ -31,9 +31,7 @@ fi
 
 # Build Verzeichnis vorbereiten 
 cd $WORKSPACE
-sh ./prepare.sh $1 $2 ar71xx-generic $3 
-letzterBefehlErfolgreich;
-sh ./prepare.sh $1 $2 mpc85xx-generic $3 
+sh ./prepare.sh
 letzterBefehlErfolgreich;
 
 # Gluon Pakete aktualisieren und Build ausführen 
@@ -42,6 +40,3 @@ sh ./compile.sh $1 $2 ar71xx-generic $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
 sh ./compile.sh $1 $2 mpc85xx-generic $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
-
-
-

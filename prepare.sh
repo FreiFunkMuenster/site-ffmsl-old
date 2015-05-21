@@ -3,15 +3,10 @@
 ###############################################################################################
 # Buildscript zu erstellung der Images
 # 
-# Dieses Script holt die passende Gluon-Version von GitHub und bereitet das 
-# Arbeitsverzeichnis zum erstellen der Images vor
+# Dieses Script holt die passende Gluon-Version von GitHub und überträgt die Gluon-Konfiguration
 #
 # Das Script benötigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
-# - Build-Nummer (z.B. 114)
-# - Gluon-target (z.B. ar71xx-generic)
-# - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
-#
 ###############################################################################################
 
 
@@ -46,9 +41,3 @@ fi
 mkdir $WORKSPACE/gluon/site 
 
 cp -r $WORKSPACE/modules $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $WORKSPACE/gluon/site
-
-
-# Gluon Pakete aktualisieren  
-cd $WORKSPACE/gluon
-make update GLUON_RELEASE=$1 GLUON_TARGET=$3
-make clean GLUON_RELEASE=$1 GLUON_TARGET=$3
