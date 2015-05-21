@@ -3,15 +3,11 @@
 ###############################################################################################
 # Buildscript zu erstellung der Images
 # 
-# Dieses Script holt die passende Gluon-Version von GitHub und bereitet das 
-# Arbeitsverzeichnis zum erstellen der Images vor
+# Dieses Script holt die passende Gluon-Version von GitHub und überträgt die Gluon-Konfiguration
 #
 # Das Script benötigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
-# - Build-Nummer (z.B. 114)
 # - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
-# - Optionale Parameter für make (z.B. V=s oder -j 4)
-#
 ###############################################################################################
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
@@ -25,7 +21,7 @@ fi
 # Verzeichnis für Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
-  git clone $3 $WORKSPACE/gluon
+  git clone $2 $WORKSPACE/gluon
 fi
 
 
@@ -44,14 +40,4 @@ fi
 
 mkdir $WORKSPACE/gluon/site 
 
-cp $WORKSPACE/modules $WORKSPACE/gluon/site 
-cp $WORKSPACE/site.mk $WORKSPACE/gluon/site 
-cp $WORKSPACE/site.conf $WORKSPACE/gluon/site 
-
-
-# Gluon Pakete aktualisieren  
-cd $WORKSPACE/gluon
-make update $4 $5 $6 $7 $8 $9  
-make clean GLUON_RELEASE=$1+$2 $4 $5 $6 $7 $8 $9
-
-
+cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $WORKSPACE/gluon/site

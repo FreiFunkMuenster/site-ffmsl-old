@@ -18,7 +18,7 @@
 
 # Globale Einstellungen 
 GLUON_URL=https://github.com/freifunk-gluon/gluon.git
-GLUON_COMMIT=v2014.4
+GLUON_COMMIT=v2015.1
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
