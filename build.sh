@@ -19,8 +19,8 @@
 letzterBefehlErfolgreich () {
 	if [ $? != 0 ]
 	then
-		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess."
-		exit 1;
+		echo "Etwas ist schief gelaufen. Beende Kompilierungsprozess, Exitstatus $?."
+		exit $?;
 	fi
 }
 		
