@@ -40,4 +40,4 @@ fi
 
 mkdir $WORKSPACE/gluon/site 
 
-cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/i18n $WORKSPACE/gluon/site
+cp -r $WORKSPACE/site.mk $WORKSPACE/site.conf $WORKSPACE/modules $WORKSPACE/i18n $WORKSPACE/gluon/site
