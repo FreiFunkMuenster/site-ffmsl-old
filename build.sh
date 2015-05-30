@@ -8,7 +8,6 @@
 # Das Script benötigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
 # - Build-Nummer (z.B. 114)
-# - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
 # - Optionale Parameter für make (z.B. V=s oder -j 4)
 #  
 ###############################################################################################
@@ -31,7 +30,7 @@ fi
 
 # Build Verzeichnis vorbereiten 
 cd $WORKSPACE
-sh ./prepare.sh $1 $3
+sh ./prepare.sh $1
 letzterBefehlErfolgreich;
 
 # Gluon Pakete aktualisieren und Build ausführen 

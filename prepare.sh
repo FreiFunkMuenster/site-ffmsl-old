@@ -7,9 +7,8 @@
 #
 # Das Script benötigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
-# - URL des Gluon-Repositories (z.B. https://github.com/freifunk-gluon/gluon.git)
 ###############################################################################################
-
+ 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
@@ -21,7 +20,7 @@ fi
 # Verzeichnis für Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
-  git clone $2 $WORKSPACE/gluon
+  git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
 fi
 
 
