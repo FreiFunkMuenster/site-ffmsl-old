@@ -46,5 +46,3 @@ sh ./compile.sh $1 $2 x86-generic $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
 sh ./compile.sh $1 $2 x86-kvm_guest $4 $5 $6 $7 $8 $9
 letzterBefehlErfolgreich;
-sh ./compile.sh $1 $2 x86-xen_domu $4 $5 $6 $7 $8 $9
-letzterBefehlErfolgreich;
