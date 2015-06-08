@@ -17,7 +17,6 @@
 ###############################################################################################
 
 # Globale Einstellungen 
-GLUON_URL=https://github.com/freifunk-gluon/gluon.git
 GLUON_COMMIT=v2015.1
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
@@ -29,7 +28,7 @@ fi
 
 # Images Erstellen 
 cd $WORKSPACE
-sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER $GLUON_URL -j 6 V=s
+sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER -j 6 V=s
 
 
 # Manifest für Autoupdater erstellen und mit den Key des Servers unterschreiben 
