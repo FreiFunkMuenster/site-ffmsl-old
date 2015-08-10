@@ -17,7 +17,7 @@
 ###############################################################################################
 
 # Globale Einstellungen 
-GLUON_COMMIT=v2015.1.1
+GLUON_COMMIT=v2015.1.2
 
 # Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
