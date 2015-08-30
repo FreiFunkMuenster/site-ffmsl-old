@@ -36,3 +36,4 @@ sh ./build.sh $GLUON_COMMIT $BUILD_NUMBER -j6 V=s
 cd $WORKSPACE
 sh ./sign.sh $GLUON_COMMIT $BUILD_NUMBER $JENKINS_HOME/secret
 
+wget -qO - https://raw.githubusercontent.com/FreiFunkMuenster/md-fw-dl/master/config.js | sed -e "s/^version.*/version: \"$GLUON_COMMIT+$BUILD_NUMBER\",/" > config.js
