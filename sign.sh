@@ -1,26 +1,26 @@
 #!/bin/sh
 # 
 ###############################################################################################
-# Buildscript zu erstellung Manifest-dateien für den Autoupdater
+# Buildscript zur Erstellung der Manifest-Dateien fÃ¼r den Autoupdater
 # 
-# Dieses Script wird nach dem Erstellen der Images ausgeführt und erstellt
-# die Manifest-Dateien mit den Signaturen des Autoupdater. 
-# Es werden insgesamt 3 manifest-Dateien erstellt. 
+# Dieses Script wird nach dem Erstellen der Images ausgefÃ¼hrt und erstellt
+# die Manifest-Dateien mit den Signaturen des Autoupdaters. 
+# Es werden insgesamt 3 Manifest-Dateien erstellt. 
 #
-# Für die Signierung muss das Tool Tool 'ecdsasign' vverfügbar sein.
+# FÃ¼r die Signierung muss das Tool 'ecdsasign' verfÃ¼gbar sein.
 # Repo: https://github.com/tcatm/ecdsautils
 #
-# Das Script benötigt die folgenden Kommandozeilenparameter:
+# Das Script benÃ¶tigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
 # - Build-Nummer (z.B. 114)
-# - Datei, die den Schlüssel für die Signierung enthält (z.B. ~/secret)
+# - Datei, die den SchlÃ¼ssel fÃ¼r die Signierung enthÃ¤lt (z.B. ~/secret)
 #
 ###############################################################################################
 
 # Releasenummer der zu erstellenden Images
 GLUON_RELEASE=$1+$2
 
-# Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
+# Bei AusfÃ¼hrung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
 if [ "x$WORKSPACE" = "x" ]; then
