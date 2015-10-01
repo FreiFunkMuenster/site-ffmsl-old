@@ -1,10 +1,10 @@
 #!/bin/sh
 # 
 ###############################################################################################
-# Jenkins-Buildscript zu Erstellung der Images
+# Jenkins-Buildscript zur Erstellung der Images
 # 
-# Dieses Script wird nach jedem Push auf dem Freifunk Buildserver ausgführt 
-# und erstelt die Images komplett neu.
+# Dieses Script wird nach jedem Push auf dem Freifunk Buildserver ausgeführt 
+# und erstellt die Images komplett neu.
 # Nach dem Build werden auch die Signaturen für den Autoupdater erstellt.
 #
 # Die URL des Gluon-Repositories sowie der verwendete Commit sind hier fest vorgegeben.
