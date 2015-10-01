@@ -1,15 +1,15 @@
 #!/bin/sh
 # 
 ###############################################################################################
-# Buildscript zu erstellung der Images
+# Buildscript zur Erstellung der Images
 # 
-# Dieses Script holt die passende Gluon-Version von GitHub und überträgt die Gluon-Konfiguration
+# Dieses Script holt die passende Gluon-Version von GitHub und Ã¼bertrÃ¤gt die Gluon-Konfiguration
 #
-# Das Script benötigt die folgenden Kommandozeilenparameter:
+# Das Script benÃ¶tigt die folgenden Kommandozeilenparameter:
 # - Gluon-Commit (z.B. v2014.4)
 ###############################################################################################
  
-# Bei Ausführung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
+# Bei AusfÃ¼hrung auf dem Buildserver ist die Variable $WORKSPACE gesetzt 
 # andernfalls wird das aktuelle Verzeichnis verwendet  
 
 if [ "x$WORKSPACE" = "x" ]; then
@@ -17,7 +17,7 @@ if [ "x$WORKSPACE" = "x" ]; then
 fi
 
 
-# Verzeichnis für Gluon-Repo erstellen und initialisieren   
+# Verzeichnis fÃ¼r Gluon-Repo erstellen und initialisieren   
 
 if [ ! -d "$WORKSPACE/gluon" ]; then
   git clone https://github.com/freifunk-gluon/gluon.git $WORKSPACE/gluon
