@@ -20,4 +20,4 @@ msgstr ""
 
 msgid "gluon-config-mode:reboot"
 msgstr ""
-"<p>The node is currently rebooting and will try to connect to other nearby Freifunk nodes  after that. Your can find lots of information about the Freifunk Münsterland community on <a href='http://freifunk-muensterland.de'>our homepage</a>.</p> <p>Have fun with your node and explore the Freifunk network!</p>"
+"<p>The node is currently rebooting and will try to connect to other nearby Freifunk nodes after that. Your can find lots of information about the Freifunk Münsterland community on <a href='http://freifunk-muensterland.de'>our homepage</a>.</p> <p>Have fun with your node and explore the Freifunk network!</p>"
