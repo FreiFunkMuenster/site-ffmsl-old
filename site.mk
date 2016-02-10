@@ -18,7 +18,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
 	gluon-mesh-vpn-fastd \
 	gluon-next-node \
-	gluon-radvd \
+	uradvd \
 	gluon-respondd \
 	gluon-setup-mode \
 	gluon-status-page \
