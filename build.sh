@@ -30,7 +30,7 @@ if [ "x$WORKSPACE" = "x" ]; then
 fi
 
 # Build Verzeichnis vorbereiten
-mkdir /var/www/html/$3/versions/v$2
+mkdir -p /var/www/html/$3/versions/v$2
 letzterBefehlErfolgreich;
 cd $WORKSPACE
 sh ./prepare.sh $1
