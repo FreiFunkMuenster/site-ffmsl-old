@@ -24,6 +24,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-status-page \
 	haveged \
 	iptables \
+	gluon-tunneldigger-watchdog \
+	gluon-migrate-vpn \
 	iwinfo
 	 
 
