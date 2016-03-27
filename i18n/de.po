@@ -25,4 +25,4 @@ msgstr ""
 
 msgid "gluon-config-mode:reboot"
 msgstr ""
-"<p>Dein Knoten startet gerade neu und wird anschließend versuchen, sich mit anderen Freifunkknoten in seiner Nähe zu verbinden. Weitere Informationen zur Münsteraner Freifunk-Community findest du auf <a href='http://freifunk-muensterland.de'>unserer Webseite</a>. Wir würden auch gerne erfahren, wie du von Freifunk erfahren hast. Schreib uns auch in deiner Email bitte, was dich dazu motiviert hat den Router aufzustellen.</p> <p> Viel Spaß mit deinem Knoten und der Erkundung von Freifunk!</p>"
+"<p>Dein Knoten startet gerade neu und wird anschließend versuchen, sich mit anderen Freifunkknoten in seiner Nähe zu verbinden. Weitere Informationen zur Münsteraner Freifunk-Community findest du auf <a href='http://freifunk-muensterland.de'>unserer Webseite</a>. Wir würden auch gerne erfahren, wie du von Freifunk erfahren hast. Schreib uns in deiner Email bitte, was dich dazu motiviert hat den Router aufzustellen.</p> <p> Viel Spaß mit deinem Knoten und der Erkundung von Freifunk!</p>"
