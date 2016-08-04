@@ -1,4 +1,4 @@
-GLUON_SITE_FEEDS='ffpb ffrl'
+GLUON_SITE_FEEDS='ffpb ffrl ffms'
 
 PACKAGES_FFPB_REPO=http://git.c3pb.de/freifunk-pb/ffho-packages.git
 PACKAGES_FFPB_COMMIT=2b92e12de39cf0bbc6726e81ab84144177adca3d
