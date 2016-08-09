@@ -26,8 +26,9 @@ GLUON_SITE_PACKAGES := \
 	iptables \
 	gluon-tunneldigger-watchdog \
 	gluon-migrate-vpn \
-	iwinfo
-	 
+	iwinfo \
+	gluon-polygon-matcher
+	
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
