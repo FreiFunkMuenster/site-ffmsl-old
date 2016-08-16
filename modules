@@ -1,4 +1,4 @@
-GLUON_SITE_FEEDS='ffpb ffrl'
+GLUON_SITE_FEEDS='ffpb ffrl corny'
 
 PACKAGES_FFPB_REPO=http://git.c3pb.de/freifunk-pb/ffho-packages.git
 PACKAGES_FFPB_COMMIT=2b92e12de39cf0bbc6726e81ab84144177adca3d
@@ -7,4 +7,5 @@ PACKAGES_FFRL_REPO=https://github.com/ffrl/ffrl-packages.git
 PACKAGES_FFRL_COMMIT=510012dbfa31f28d8cce223b058c1b32e2bf2201
 PACKAGES_FFRL_BRANCH=Branch_v2016.1.x
 
-
+PACKAGES_CORNY_REPO=https://github.com/HellMar/packages.git
+PACKAGES_CORNY_COMMIT=5e29d13d4e437154c6ddac416cee5c10c5724b71
