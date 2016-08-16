@@ -27,7 +27,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-tunneldigger-watchdog \
 	gluon-migrate-vpn \
 	iwinfo \
-	gluon-ssid-changer
+	gluon-ssid-changer \
+	gluon-polygon-matcher
 	 
 
 GLUON_PRIORITY ?= 3
