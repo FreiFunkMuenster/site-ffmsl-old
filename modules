@@ -7,5 +7,5 @@ PACKAGES_FFRL_REPO=https://github.com/ffrl/ffrl-packages.git
 PACKAGES_FFRL_COMMIT=510012dbfa31f28d8cce223b058c1b32e2bf2201
 PACKAGES_FFRL_BRANCH=Branch_v2016.1.x
 
-PACKAGES_FFMS_REPO=https://github.com/MPW1412/gluon-polygon-matcher.git
-PACKAGES_FFMS_COMMIT=eb22cfa80f41e9aebf61de7ae96e50d9afbee27a
+PACKAGES_FFMS_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
+PACKAGES_FFMS_COMMIT=bd328a08296335ac103a0b8a7fa55538f8e6527e
