@@ -1,4 +1,4 @@
-GLUON_SITE_FEEDS='ffpb ffrl ffms ffddorf'
+GLUON_SITE_FEEDS='ffpb ffrl ffms'
 
 PACKAGES_FFPB_REPO=http://git.c3pb.de/freifunk-pb/ffho-packages.git
 PACKAGES_FFPB_COMMIT=2b92e12de39cf0bbc6726e81ab84144177adca3d
@@ -9,6 +9,3 @@ PACKAGES_FFRL_BRANCH=Branch_v2016.1.x
 
 PACKAGES_FFMS_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
 PACKAGES_FFMS_COMMIT=bd5a1de67a144cb279bc1a8f542fab64d2899568
-
-PACKAGES_FFDDORF_REPO=https://github.com/ffddorf/gluon-rfkill-disable.git
-PACKAGES_FFDDORF_COMMIT=673ee2610d5f3c4528b1393dc283fa25d46770c8
