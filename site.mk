@@ -28,7 +28,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-migrate-vpn \
 	iwinfo \
 	gluon-ssid-changer \
-	gluon-rfkill-disable \
+#	gluon-rfkill-disable
 	gluon-config-mode-show-mac
 
 GLUON_PRIORITY ?= 3
