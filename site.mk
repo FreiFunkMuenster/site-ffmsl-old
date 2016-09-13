@@ -26,8 +26,10 @@ GLUON_SITE_PACKAGES := \
 	iptables \
 	gluon-tunneldigger-watchdog \
 	gluon-migrate-vpn \
-	iwinfo
-	 
+	iwinfo \
+	gluon-ssid-changer \
+	gluon-config-mode-show-mac \
+	gluon-rfkill-disable
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
