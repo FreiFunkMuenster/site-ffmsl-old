@@ -28,8 +28,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-migrate-vpn \
 	iwinfo \
 	gluon-ssid-changer \
-	gluon-polygon-matcher
-	 
+	gluon-config-mode-show-mac \
+	gluon-rfkill-disable
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
