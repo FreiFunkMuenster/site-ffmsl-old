@@ -29,7 +29,7 @@ msgstr ""
 
 msgid "gluon-config-mode:macaddr"
 msgstr ""
-"<p>Dies ist die Primäre MAC-Adresse deines Freifunkknotens. Erst nachdem diese auf den Servern des Münsterländer Freifunk-Projektes eingetragen wurde, kann sich dein Knoten mit dem Münsterländer Mesh-VPN verbinden. Bitte schicke dazu diese MAC und den Namen deines Knotens (<em><%=hostname%></em>) an <a href='mailto:info@freifunk-muensterland.de?subject=Neuer%20Freifunkknoten&body=%23%20<%=hostname%>%0amac%20%22<%=macaddr%>%22%3b'>info@freifunk-muensterland.de</a>.</p>"
+"<p>Dies ist die Primäre MAC-Adresse deines Freifunkknotens. Erst nachdem diese auf den Servern des Münsterländer Freifunk-Projektes eingetragen wurde, kann sich dein Knoten mit den Servern verbinden. Bitte schicke dazu diese MAC und den Namen deines Knotens (<em><%=hostname%></em>) an <a href='mailto:info@freifunk-muensterland.de?subject=Neuer%20Freifunkknoten&body=%23%20<%=hostname%>%0amac%20%22<%=macaddr%>%22%3b'>info@freifunk-muensterland.de</a>.</p>"
 "<div class=\"the-key\">"
 " # <%= hostname %>"
 " <br/>"
