@@ -1,10 +1,11 @@
-GLUON_SITE_FEEDS='ffpb ffrl'
+GLUON_SITE_FEEDS='ffpb ffrl ffms'
 
 PACKAGES_FFPB_REPO=http://git.c3pb.de/freifunk-pb/ffho-packages.git
 PACKAGES_FFPB_COMMIT=2b92e12de39cf0bbc6726e81ab84144177adca3d
 
 PACKAGES_FFRL_REPO=https://github.com/ffrl/ffrl-packages.git
-PACKAGES_FFRL_COMMIT=510012dbfa31f28d8cce223b058c1b32e2bf2201
+PACKAGES_FFRL_COMMIT=c6a6fd5ff2954495d8b6feae4094805d206917fc
 PACKAGES_FFRL_BRANCH=Branch_v2016.1.x
 
-
+PACKAGES_FFMS_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
+PACKAGES_FFMS_COMMIT=52a48b452654ac3f351ea2a93d5eba4464c6aa50
