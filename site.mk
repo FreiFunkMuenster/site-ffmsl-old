@@ -27,8 +27,9 @@ GLUON_SITE_PACKAGES := \
 	gluon-tunneldigger-watchdog \
 	gluon-migrate-vpn \
 	iwinfo \
-	gluon-ssid-changer
-	 
+	gluon-ssid-changer \
+	gluon-config-mode-show-mac \
+	gluon-rfkill-disable
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
