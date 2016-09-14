@@ -29,7 +29,7 @@ msgstr ""
 
 msgid "gluon-config-mode:macaddr"
 msgstr ""
-"<p>This is your Freifunk node's primary MAC-Address. The node won't be able to connect to the mesh VPN until the MAC has been registered on the Freifunk Münsterland servers. To register, send the key together with your node's name (<em><%=hostname%></em>) to <a href='mailto:info@freifunk-muenster.de?subject=neuer-knoten&body=%23%20<%=hostname%>%0amacaddr%20%22<%=macaddr%>%22%3b'>info@freifunk-muensterland.de</a>.</p>"
+"<p>Please send the text in the box on<a href='mailto:info@freifunk-muenster.de?subject=neuer-knoten&body=%23%20<%=hostname%>%0amacaddr%20%22<%=macaddr%>%22%3b'>info@freifunk-muensterland.de</a> to register your node.</p>"
 "<div class=\"the-key\">"
 " # <%= hostname %>"
 " <br/>"
