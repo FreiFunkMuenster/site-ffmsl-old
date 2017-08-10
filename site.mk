@@ -1,4 +1,5 @@
 GLUON_SITE_PACKAGES := \
+        ffpb-ebtables-net-rules \
 	gluon-respondd\
 	gluon-autoupdater \
 	gluon-config-mode-autoupdater \
