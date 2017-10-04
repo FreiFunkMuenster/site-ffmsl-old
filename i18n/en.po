@@ -33,5 +33,10 @@ msgstr ""
 "<div class=\"the-key\">"
 " # <%= hostname %>"
 " <br/>"
-"<%= macaddr %>"
+"<%= macaddr %>-<%= site %>"
 "</div>"
+
+msgid "gluon-config-mode:novpn"
+msgstr ""
+"<p>Warning! You left the VPN on this node disabled. This means, that it will only work, if it can reach another node via cable or wifi near by. If you want to share your own internet connection aswell, go back into configuration mode and enable VPN.</p>"
+
