@@ -33,5 +33,10 @@ msgstr ""
 "<div class=\"the-key\">"
 " # <%= hostname %>"
 " <br/>"
-"<%= macaddr %>"
+"<%= macaddr %>-<%= site %>"
 "</div>"
+
+msgid "gluon-config-mode:novpn"
+msgstr ""
+"<p>Achtung! Du hast diesen Knoten ohne VPN konfiguriert. Er funktioniert nur, wenn er über Kabel oder WLAN mit einem weiteren Freifunkknoten in der Nähe kommunizieren kann. Wenn du auch deine eigene Internetleitung teilen möchtest, gehe zurück in den Konfigurationsmodus und aktiviere dies.</p>" 
+
