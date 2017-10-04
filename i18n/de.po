@@ -33,7 +33,7 @@ msgstr ""
 "<div class=\"the-key\">"
 " # <%= hostname %>"
 " <br/>"
-"<%= macaddr %>"
+"<%= macaddr %>-<%= site %>"
 "</div>"
 
 msgid "gluon-config-mode:novpn"
