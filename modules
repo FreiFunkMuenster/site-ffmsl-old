@@ -9,3 +9,4 @@ PACKAGES_FFRL_BRANCH=Branch_v2017.x
 
 PACKAGES_FFMS_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
 PACKAGES_FFMS_COMMIT=82a211a15aa9b314ed610c6cbfb66a21d2d1729f
+PACKAGES_FFMS_BRANCH=master
