@@ -19,6 +19,8 @@ GLUON_FEATURES := \
 	web-advanced \
 	web-wizard \
         web-private-wifi \
+	advancedstats \
+        config-mode-statistics \
 	ssid-changer \
         rfkill-disable
 
