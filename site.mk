@@ -1,33 +1,61 @@
-GLUON_SITE_PACKAGES := \
-	gluon-respondd\
-	gluon-autoupdater \
-	gluon-config-mode-autoupdater \
-	gluon-config-mode-contact-info \
-	gluon-config-mode-core \
-	gluon-config-mode-geo-location \
-	gluon-config-mode-hostname \
-	gluon-ebtables-filter-multicast \
-	gluon-ebtables-filter-ra-dhcp \
-	gluon-ebtables-source-filter \
-	gluon-web-admin \
-	gluon-web-autoupdater \
-	gluon-web-network \
-	gluon-web-private-wifi \
-	gluon-web-wifi-config \
-	gluon-mesh-batman-adv-15 \
-	gluon-mesh-vpn-tunneldigger \
-	gluon-radvd \
-	gluon-setup-mode \
-	gluon-status-page \
-	haveged \
-	iptables \
-	gluon-mesh-vpn-core \
-	iwinfo \
-	gluon-ssid-changer \
-	gluon-config-mode-show-mac \
-	gluon-rfkill-disable
+##	gluon site.mk makefile 
 
-GLUON_PRIORITY ?= 3
+##	GLUON_FEATURES
+#		Specify Gluon features/packages to enable;
+#		Gluon will automatically enable a set of packages
+#		depending on the combination of features listed
+
+GLUON_FEATURES := \
+	autoupdater \
+	ebtables-filter-multicast \
+	ebtables-filter-ra-dhcp \
+	ebtables-limit-arp \
+	ebtables-source-filter \
+	mesh-batman-adv-15 \
+	mesh-vpn-tunneldigger \
+	radvd \
+	respondd \
+	status-page \
+	web-advanced \
+	web-wizard \
+        web-private-wifi \
+	ssid-changer \
+        rfkill-disable
+
+
+##	GLUON_SITE_PACKAGES
+#		Specify additional Gluon/OpenWrt packages to include here;
+#		A minus sign may be prepended to remove a packages from the
+#		selection that would be enabled by default or due to the
+#		chosen feature flags
+
+GLUON_SITE_PACKAGES := haveged iwinfo iptables
+
+##	DEFAULT_GLUON_RELEASE
+#		version string to use for images
+#		gluon relies on
+#			opkg compare-versions "$1" '>>' "$2"
+#		to decide if a version is newer or not.
+
+DEFAULT_GLUON_RELEASE := 2018.1+exp$(shell date '+%Y%m%d')
+
+# Variables set with ?= can be overwritten from the command line
+
+##	GLUON_RELEASE
+#		call make with custom GLUON_RELEASE flag, to use your own release version scheme.
+#		e.g.:
+#			$ make images GLUON_RELEASE=23.42+5
+#		would generate images named like this:
+#			gluon-ff%site_code%-23.42+5-%router_model%.bin
+
+GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
+
+# Default priority for updates.
+GLUON_PRIORITY ?= 0
+
+# Region code required for some images; supported values: us eu
+GLUON_REGION ?= eu
+
+# Languages to include
 GLUON_LANGS ?= en de
-GLUON_ATH10K_MESH := 11s
-GLUON_REGION := eu
+
