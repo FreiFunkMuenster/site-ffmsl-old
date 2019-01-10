@@ -1,5 +1,5 @@
 GLUON_SITE_PACKAGES := \
-        ffpb-ebtables-net-rules \
+	ffpb-ebtables-net-rules \
 	gluon-respondd\
 	gluon-autoupdater \
 	gluon-config-mode-autoupdater \
@@ -25,10 +25,10 @@ GLUON_SITE_PACKAGES := \
 	iptables \
 	gluon-tunneldigger-watchdog \
 	gluon-migrate-vpn \
-	iwinfo \
-	gluon-ssid-changer \
-	gluon-config-mode-show-mac \
-	gluon-rfkill-disable
+	iwinfo #\
+	#gluon-ssid-changer \
+	#gluon-config-mode-show-mac \
+	#gluon-rfkill-disable
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
