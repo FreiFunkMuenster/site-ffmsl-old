@@ -22,10 +22,10 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	iptables \
 	gluon-mesh-vpn-core \
-	iwinfo \
-	gluon-ssid-changer \
-	gluon-config-mode-show-mac \
-	gluon-rfkill-disable
+	iwinfo #\
+	#gluon-ssid-changer \
+	#gluon-config-mode-show-mac \
+	#gluon-rfkill-disable
 
 GLUON_PRIORITY ?= 3
 GLUON_LANGS ?= en de
