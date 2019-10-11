@@ -39,7 +39,7 @@ GLUON_SITE_PACKAGES := haveged iwinfo iptables
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := 2018.1+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2019.1+exp$(shell date '+%Y%m%d')
 
 # Variables set with ?= can be overwritten from the command line
 
