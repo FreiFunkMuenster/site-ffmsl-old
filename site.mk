@@ -22,7 +22,6 @@ GLUON_FEATURES := \
 	advancedstats \
         config-mode-statistics \
 	ssid-changer \
-	tunneldigger-watchdog \
         rfkill-disable
 
 
