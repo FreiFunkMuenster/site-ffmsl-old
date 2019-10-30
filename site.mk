@@ -11,7 +11,7 @@ GLUON_FEATURES := \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
 	ebtables-source-filter \
-	mesh-batman-adv-15 \
+	mesh-babel \
 	mesh-vpn-tunneldigger \
 	radvd \
 	respondd \
