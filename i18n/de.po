@@ -69,3 +69,12 @@ msgstr ""
 
 msgid "gluon-config-mode:contact-note"
 msgstr ""
+
+msgid "gluon-config-mode:domain"
+msgstr "Domäne"
+
+msgid "gluon-config-mode:domain-select"
+msgstr ""
+"Hier hast du die Möglichkeit, die Mesh-Domäne, in der sich dein Knoten "
+"befindet, auszuwählen. Bitte denke daran, dass sich dein Knoten nur mit den "
+"Knoten der ausgewählten Domäne verbinden kann."
