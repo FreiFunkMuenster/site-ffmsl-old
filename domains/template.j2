@@ -1,0 +1,64 @@
+{
+	domain_names = {
+{% for code, name in names.items() %}
+		{{ code }} = '{{ name }}',
+{% endfor %}
+	},
+
+	domain_seed = '{{ seed }}',
+
+	prefix4 = '10.{{ id }}.0.0/16',
+	prefix6 = '2a03:2260:115:{{ id }}00::/64',
+	extra_prefixes6 = {
+		'2001:678:894:{{ hex_id }}0::/64',
+	},
+
+	wifi24 = {
+		ap = {
+			ssid = 'Freifunk',
+			channel = 1,
+		},
+		mesh = {
+                        id = '{{ mesh_id }}',
+		},
+	},
+
+	wifi5 = {
+		ap = {
+			ssid = 'Freifunk',
+			channel = 44,
+		},
+		mesh = {
+			id = '{{ mesh_id }}',
+		},
+	},
+
+	next_node = {
+		name = { 'knoten', },
+		ip4 = '10.{{ id }}.0.1',
+		ip6 = '2a03:2260:115:{{ id }}00::1',
+	},
+
+	mesh = {
+		vxlan = false,
+		batman_adv = {
+			routing_algo = 'BATMAN_IV',
+		},
+	},
+
+	mesh_vpn = {
+		tunneldigger = {
+			brokers = {
+				'domaene{{ full_id }}-a.servers.freifunk-muensterland.de:{{ port }}',
+				'domaene{{ full_id }}-a.servers.freifunk-muensterland.de:{{ port }}',
+				'domaene{{ full_id }}-b.servers.freifunk-muensterland.net:{{ port }}',
+				'domaene{{ full_id }}-b.servers.freifunk-muensterland.net:{{ port }}',
+			},
+		},
+	},
+
+{% if hide %}
+	hide_domain = true,
+{% endif %}
+
+}
