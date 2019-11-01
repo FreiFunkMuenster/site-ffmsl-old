@@ -111,7 +111,10 @@ if __name__ == '__main__':
         hide = values.get('hide', False)
         port = values.get('port', 20000 + id)
         full_id = str(id).zfill(2)
-        primary_code = 'ffmsd' + full_id
+        if id == 99:
+            primary_code = 'insel'
+        else:
+            primary_code = 'ffmsd' + full_id
         hex_id = hex(id).split('x')[-1]
         with open(THIS_DIR + '/' + primary_code + '.conf', 'w') as f:
             f.write(render(id, names, seed, hide, port, full_id, hex_id, mesh_id))
