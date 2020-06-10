@@ -1,25 +1,29 @@
-From b1eec105a0a806b7eada853059972e41fbbe1dc1 Mon Sep 17 00:00:00 2001
+From 6c34b2aaf649b6b5d9a2212461bd294d80fff15b Mon Sep 17 00:00:00 2001
 From: RobWei <admin@robwei.me>
-Date: Sun, 2 Feb 2020 11:44:32 +0100
-Subject: [PATCH] * undo respondd breaking change
+Date: Wed, 10 Jun 2020 02:16:49 +0200
+Subject: [PATCH] [PATCH] Fixed undo of respondd breaking change
 
 ---
- package/gluon-respondd/files/etc/init.d/gluon-respondd | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ package/gluon-respondd/files/etc/init.d/gluon-respondd | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/package/gluon-respondd/files/etc/init.d/gluon-respondd b/package/gluon-respondd/files/etc/init.d/gluon-respondd
-index c7b071e..dca7cbd 100755
+index c7b071eb..bd77bc00 100755
 --- a/package/gluon-respondd/files/etc/init.d/gluon-respondd
 +++ b/package/gluon-respondd/files/etc/init.d/gluon-respondd
-@@ -13,7 +13,7 @@ start_service() {
- 	local clientdevs=$(for dev in $(echo "$ifdump" | jsonfilter -e "@.interface[@.interface='$(cat /lib/gluon/respondd/client.dev 2>/dev/null)' && @.up=true].device"); do echo " -i $dev -t $MAXDELAY";done;)
+@@ -10,10 +10,10 @@ start_service() {
+ 	local ifdump="$(ubus call network.interface dump)"
+ 
+ 	local meshdevs=$(for dev in $(echo "$ifdump" | jsonfilter -e "@.interface[@.proto='gluon_mesh' && @.up=true].device"); do echo " -i $dev";done;)
+-	local clientdevs=$(for dev in $(echo "$ifdump" | jsonfilter -e "@.interface[@.interface='$(cat /lib/gluon/respondd/client.dev 2>/dev/null)' && @.up=true].device"); do echo " -i $dev -t $MAXDELAY";done;)
++	local clientdevs=$(for dev in $(echo "$ifdump" | jsonfilter -e "@.interface[@.interface='$(cat /lib/gluon/respondd/client.dev 2>/dev/null)' && @.up=true].device"); do echo " -i $dev";done;)
  
  	procd_open_instance
 -	procd_set_param command $DAEMON -d /usr/lib/respondd -p 1001 -g ff02::2:1001 $meshdevs -g ff05::2:1001 $clientdevs
-+	procd_set_param command $DAEMON -d /usr/lib/respondd -p 1001 -g ff02::2:1001 $clientdevs $meshdevs -g ff05::2:1001 $clientdevs
++	procd_set_param command $DAEMON -d /usr/lib/respondd -p 1001 -g ff02::2:1001 $meshdevs $clientdevs -g ff05::2:1001 $clientdevs -t $MAXDELAY
  	procd_set_param respawn ${respawn_threshold:-3600} ${respawn_timeout:-5} ${respawn_retry:-5}
  	procd_set_param stderr 1
  	procd_close_instance
 -- 
-2.7.4
+2.26.2
 
