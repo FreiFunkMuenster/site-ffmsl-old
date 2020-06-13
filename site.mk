@@ -63,3 +63,4 @@ GLUON_LANGS ?= en de
 
 
 GLUON_DEPRECATED ?= upgrade
+GLUON_BRANCH ?= stable
