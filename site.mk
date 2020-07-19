@@ -31,7 +31,7 @@ GLUON_FEATURES := \
 #		selection that would be enabled by default or due to the
 #		chosen feature flags
 
-GLUON_SITE_PACKAGES := haveged iwinfo iptables
+GLUON_SITE_PACKAGES := iwinfo iptables
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
@@ -39,7 +39,7 @@ GLUON_SITE_PACKAGES := haveged iwinfo iptables
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := 2019.1+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2020.2at$(shell date '+%Y%m%d')i
 
 # Variables set with ?= can be overwritten from the command line
 
@@ -64,3 +64,4 @@ GLUON_LANGS ?= en de
 
 GLUON_DEPRECATED ?= upgrade
 GLUON_BRANCH ?= stable
+
