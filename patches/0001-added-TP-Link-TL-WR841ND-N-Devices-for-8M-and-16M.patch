@@ -1,18 +1,17 @@
-From 6d36ed9d00f4f301819958e049e3c5f573cb2a23 Mon Sep 17 00:00:00 2001
-From: Dark4MD <github.web@manu.li>
-Date: Tue, 18 Jun 2019 10:30:59 +0200
-Subject: [PATCH] added TP-Link TL-WR841ND/N Devices for 8M and 16M Variants
+From fa3f6b43cb4a1fb994db1f961093f3a5f20eef85 Mon Sep 17 00:00:00 2001
+From: RobWei <admin@robwei.me>
+Date: Sat, 25 Jul 2020 22:36:44 +0200
+Subject: [PATCH 197/197] * add 841 mod
 
 ---
  ...nk-TL-WR841ND-N-Devices-for-8M-and-16M-Va.patch | 116 +++++++++++++++++++++
  targets/ar71xx-generic                             |  31 ++++++
  2 files changed, 147 insertions(+)
  create mode 100755 patches/openwrt/0022-added-TP-Link-TL-WR841ND-N-Devices-for-8M-and-16M-Va.patch
- mode change 100644 => 100755 targets/ar71xx-generic
 
 diff --git a/patches/openwrt/0022-added-TP-Link-TL-WR841ND-N-Devices-for-8M-and-16M-Va.patch b/patches/openwrt/0022-added-TP-Link-TL-WR841ND-N-Devices-for-8M-and-16M-Va.patch
 new file mode 100755
-index 00000000..52190675
+index 0000000..5219067
 --- /dev/null
 +++ b/patches/openwrt/0022-added-TP-Link-TL-WR841ND-N-Devices-for-8M-and-16M-Va.patch
 @@ -0,0 +1,116 @@
@@ -133,13 +132,11 @@ index 00000000..52190675
 +2.11.0
 +
 diff --git a/targets/ar71xx-generic b/targets/ar71xx-generic
-old mode 100644
-new mode 100755
-index 9f62917f..1bc4cef8
+index a4a44e5..76b6264 100644
 --- a/targets/ar71xx-generic
 +++ b/targets/ar71xx-generic
-@@ -347,6 +347,37 @@ device('tp-link-re450', 're450-v1', {
- 	packages = ATH10K_PACKAGES,
+@@ -362,6 +362,37 @@ device('tp-link-re450', 're450-v1', {
+ 	class = 'tiny', -- Only 6M of usable Firmware space
  })
  
 +device('tp-link-tl-wr841n-nd-mod-8m-v8', 'tl-wr841-v8-8m', {
@@ -155,7 +152,7 @@ index 9f62917f..1bc4cef8
 +})
 +
 +device('tp-link-tl-wr841n-nd-mod-8m-v11', 'tl-wr841-v11-8m', {
-+	factory = false,
++        factory = false,
 +})
 +
 +device('tp-link-tl-wr841n-nd-mod-16m-v8', 'tl-wr841-v8-16m', {
@@ -171,11 +168,11 @@ index 9f62917f..1bc4cef8
 +})
 +
 +device('tp-link-tl-wr841n-nd-mod-16m-v11', 'tl-wr841-v11-16m', {
-+	factory = false,
++        factory = false,
 +})
  
  -- Ubiquiti
  
 -- 
-2.11.0
+2.7.4
 
