@@ -23,7 +23,8 @@ GLUON_FEATURES := \
         config-mode-statistics \
 	ssid-changer \
 	tunneldigger-watchdog \
-        rfkill-disable
+        rfkill-disable \
+	authorized-keys
 
 
 ##	GLUON_SITE_PACKAGES
