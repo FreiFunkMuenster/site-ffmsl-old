@@ -22,8 +22,7 @@ GLUON_FEATURES := \
 	advancedstats \
         config-mode-statistics \
 	ssid-changer \
-        rfkill-disable\
-	authorized-keys
+        rfkill-disable
 
 
 ##	GLUON_SITE_PACKAGES
