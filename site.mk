@@ -39,7 +39,7 @@ GLUON_SITE_PACKAGES := iwinfo
 #			opkg compare-versions "$1" '>>' "$2"
 #		to decide if a version is newer or not.
 
-DEFAULT_GLUON_RELEASE := 2020.2at$(shell date '+%Y%m%d')i
+DEFAULT_GLUON_RELEASE := 2022.1at$(shell date '+%Y%m%d')i
 
 # Variables set with ?= can be overwritten from the command line
 
