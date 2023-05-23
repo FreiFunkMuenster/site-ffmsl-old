@@ -1,5 +1,11 @@
-GLUON_SITE_FEEDS='ffms'
+GLUON_SITE_FEEDS='ffmsl ffda community'
 
-PACKAGES_FFMS_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
-PACKAGES_FFMS_COMMIT=dc540fff34b99d9a3db3dcb7ca2cf8c9659913b9
-PACKAGES_FFMS_BRANCH=v2021.1.1
+PACKAGES_FFMSL_REPO=https://github.com/FreiFunkMuenster/packages-ffms.git
+PACKAGES_FFMSL_COMMIT=dc540fff34b99d9a3db3dcb7ca2cf8c9659913b9
+PACKAGES_FFMSL_BRANCH=v2021.1.1
+
+PACKAGES_FFDA_REPO=https://git.darmstadt.ccc.de/ffda/firmware/packages.git
+PACKAGES_FFDA_COMMIT=d940edbe8ee74207a3ce9fe9ef0bad5745f5cf25
+
+PACKAGES_COMMUNITY_REPO=https://github.com/freifunk-gluon/community-packages.git
+PACKAGES_COMMUNITY_COMMIT=c3287a1b0bfbe72055332f23ce635c4c8e3d4460
