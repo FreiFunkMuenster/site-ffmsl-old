@@ -29,7 +29,6 @@ GLUON_FEATURES := \
         rfkill-disable
 
 GLUON_FEATURES_standard := \
-	web-cellular \
 	wireless-encryption-wpa3
 
 ##	GLUON_SITE_PACKAGES
@@ -70,3 +69,10 @@ GLUON_LANGS ?= en de
 
 # Don't build factory firmware for deprecated devices
 GLUON_DEPRECATED ?= upgrade
+
+# Build gluon with multidomain support.
+GLUON_MULTIDOMAIN=1
+
+# Enable Autoupdater
+GLUON_AUTOUPDATER_ENABLED=1
+GLUON_AUTOUPDATER_BRANCH=stable
